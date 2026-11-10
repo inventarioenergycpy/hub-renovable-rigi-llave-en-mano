@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -561,6 +561,96 @@
       border-left: 6px solid #000000 !important;
     }
 
+    /* Conmutación entre tabla ancha de pantalla y tablas transpuestas individuales para impresión */
+    .print-only-matrix {
+      display: none;
+    }
+
+    .print-offers-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 14px;
+    }
+
+    .print-offer-box {
+      border: 1.5px solid #0f172a;
+      border-radius: 8px;
+      padding: 10px 12px;
+      background: rgba(255, 255, 255, 0.20);
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    .print-offer-box-full {
+      grid-column: 1 / -1;
+    }
+
+    .print-offer-header {
+      font-size: 0.88rem;
+      font-weight: 800;
+      color: #000000;
+      border-bottom: 1.5px solid #0f172a;
+      padding-bottom: 5px;
+      margin-bottom: 6px;
+    }
+
+    .print-offer-meta {
+      font-size: 0.76rem;
+      color: #111827;
+      font-weight: 600;
+      display: block;
+      margin-top: 2px;
+    }
+
+    .print-transposed-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.78rem;
+    }
+
+    .print-transposed-table th,
+    .print-transposed-table td {
+      padding: 5px 7px !important;
+      font-size: 0.77rem !important;
+      line-height: 1.3 !important;
+    }
+
+    .print-summary-box {
+      margin-top: 18px;
+      border: 2px solid #000000;
+      border-radius: 8px;
+      padding: 12px 14px;
+      background: rgba(255, 255, 255, 0.24);
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    .print-summary-title {
+      font-size: 0.98rem;
+      font-weight: 800;
+      color: #000000;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+
+    .row-total-portfolio td {
+      background: rgba(203, 213, 225, 0.65) !important;
+      color: #000000 !important;
+      font-weight: 800 !important;
+      border-top: 2px solid #000000 !important;
+      border-bottom: 2px solid #000000 !important;
+    }
+
+    body.print-preview .screen-only-matrix {
+      display: none !important;
+    }
+
+    body.print-preview .print-only-matrix {
+      display: block !important;
+    }
+
     @media print {
       @page {
         margin: 10mm;
@@ -742,6 +832,35 @@
         color: #000000 !important;
         border: 1.5px solid #0f172a !important;
         border-left: 6px solid #000000 !important;
+      }
+
+      /* En impresión real se oculta la tabla horizontal ancha y se activan las tablas transpuestas + resumen */
+      .screen-only-matrix {
+        display: none !important;
+      }
+
+      .print-only-matrix {
+        display: block !important;
+      }
+
+      #slide-7 {
+        page-break-inside: auto !important;
+        break-inside: auto !important;
+      }
+
+      .print-offer-box,
+      .print-summary-box {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+        background: rgba(255, 255, 255, 0.18) !important;
+        color: #000000 !important;
+        border-color: #000000 !important;
+      }
+
+      .print-offer-header,
+      .print-offer-meta,
+      .print-summary-title {
+        color: #000000 !important;
       }
     }
 
@@ -1048,7 +1167,8 @@
         <span class="pill pill-green">Sin Doble Cómputo · CAPEX All-In · Tasa ECA 7,2%–8,2%</span>
       </div>
 
-      <div class="table-wrap">
+      <!-- VERSIÓN PANTALLA (MODO INTERACTIVO HORIZONTAL) -->
+      <div class="table-wrap screen-only-matrix">
         <table>
           <thead>
             <tr>
@@ -1130,6 +1250,282 @@
             </tr>
           </tbody>
         </table>
+      </div>
+
+      <!-- VERSIÓN IMPRIMIBLE (DISEÑO TRANSPUESTO CON TABLAS INDIVIDUALES POR OFERTA + TABLA RESUMEN DE TOTALES AL FINAL) -->
+      <div class="print-only-matrix">
+        <p class="lead-paragraph" style="margin-bottom:10px;">
+          <strong>Diseño Imprimible Adaptado a Margen de Hoja (Filas Transpuestas por Columnas):</strong> Se presentan a continuación las <strong>7 Tablas Individuales Auditadas por Oferta</strong> (comparando Caso Base Realista P50 vs. Peor Caso Admisible P90 con Margen Mínimo Garantizado) y, al cierre, la <strong>Tabla Resumen Comparativa de Totales Consolidados del Portafolio</strong>.
+        </p>
+
+        <div class="print-offers-grid">
+          <!-- OFERTA 1 TRANSPUESTA -->
+          <div class="print-offer-box">
+            <div class="print-offer-header">
+              OFERTA 1: Hub VPU RIGI Integral Llave en Mano
+              <span class="print-offer-meta">Solar 250 MWac + BESS 100 MW/400 MWh + 10 Electrogasolineras + Bus H2V-Ready | Cliente: Privado / Consorcio VPU</span>
+            </div>
+            <table class="print-transposed-table">
+              <thead>
+                <tr>
+                  <th>Indicador Auditado</th>
+                  <th>Caso Base (P50)</th>
+                  <th>Peor Caso (P90 Mín.)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>CAPEX All-In Total</strong></td><td>USD 265,00 M</td><td>USD 275,00 M</td></tr>
+                <tr><td><strong>Financiación 50% Turquía</strong></td><td>USD 132,50 M (7,20%)</td><td>USD 137,50 M (7,80%)</td></tr>
+                <tr><td><strong>EBITDA Operativo Año 1</strong></td><td><strong>USD 43,52 M</strong> (80,6%)</td><td><strong>USD 31,70 M</strong> (73,6%)</td></tr>
+                <tr class="row-highlight"><td><strong>Margen Neto Contable Año 1</strong></td><td><strong>31,61%</strong></td><td><strong>19,20% (Mínimo)</strong></td></tr>
+                <tr><td><strong>Payback del Proyecto</strong></td><td><strong>6,11 años</strong></td><td><strong>8,52 años</strong></td></tr>
+                <tr class="row-highlight"><td><strong>Payback del Capital (Equity)</strong></td><td><strong>4,65 años</strong></td><td><strong>7,66 años</strong></td></tr>
+                <tr><td><strong>TIR del Proyecto (USD)</strong></td><td><strong>14,03% anual</strong></td><td><strong>9,16% anual</strong></td></tr>
+                <tr class="row-highlight"><td><strong>TIR del Capital Equity (USD)</strong></td><td><strong>20,09% anual</strong></td><td><strong>12,01% anual</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- OFERTA 2 TRANSPUESTA -->
+          <div class="print-offer-box">
+            <div class="print-offer-header">
+              OFERTA 2: Licitación Nacional BESS + Solar (AlmaSADI / AlmaGBA)
+              <span class="print-offer-meta">BESS Grid-Forming 50 MW/200 MWh (4h) + Solar 100 MWac (PDG + PES USD 10/MWh) | Cliente: Público CAMMESA / Distrib.</span>
+            </div>
+            <table class="print-transposed-table">
+              <thead>
+                <tr>
+                  <th>Indicador Auditado</th>
+                  <th>Caso Base (P50)</th>
+                  <th>Peor Caso (P90 Mín.)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>CAPEX All-In Total</strong></td><td>USD 112,00 M</td><td>USD 118,00 M</td></tr>
+                <tr><td><strong>Financiación 50% Turquía</strong></td><td>USD 56,00 M (7,20%)</td><td>USD 59,00 M (7,80%)</td></tr>
+                <tr><td><strong>EBITDA Operativo Año 1</strong></td><td><strong>USD 17,90 M</strong> (82,1%)</td><td><strong>USD 13,60 M</strong> (75,1%)</td></tr>
+                <tr class="row-highlight"><td><strong>Margen Neto Contable Año 1</strong></td><td><strong>29,80%</strong></td><td><strong>18,10% (Mínimo)</strong></td></tr>
+                <tr><td><strong>Payback del Proyecto</strong></td><td><strong>6,26 años</strong></td><td><strong>8,45 años</strong></td></tr>
+                <tr class="row-highlight"><td><strong>Payback del Capital (Equity)</strong></td><td><strong>4,82 años</strong></td><td><strong>7,58 años</strong></td></tr>
+                <tr><td><strong>TIR del Proyecto (USD)</strong></td><td><strong>13,65% anual</strong></td><td><strong>9,28% anual</strong></td></tr>
+                <tr class="row-highlight"><td><strong>TIR del Capital Equity (USD)</strong></td><td><strong>19,40% anual</strong></td><td><strong>12,25% anual</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- OFERTA 3 TRANSPUESTA -->
+          <div class="print-offer-box">
+            <div class="print-offer-header">
+              OFERTA 3: Central Híbrida Minera 24/7 con Black-Start
+              <span class="print-offer-meta">Solar 150 MWac Alta Montaña + BESS 80 MW/320 MWh (Sustitución Diésel) | Cliente: Privado Minero / Fideicomisos Prov.</span>
+            </div>
+            <table class="print-transposed-table">
+              <thead>
+                <tr>
+                  <th>Indicador Auditado</th>
+                  <th>Caso Base (P50)</th>
+                  <th>Peor Caso (P90 Mín.)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>CAPEX All-In Total</strong></td><td>USD 168,00 M</td><td>USD 176,00 M</td></tr>
+                <tr><td><strong>Financiación 50% Turquía</strong></td><td>USD 84,00 M (7,40%)</td><td>USD 88,00 M (8,20%)</td></tr>
+                <tr><td><strong>EBITDA Operativo Año 1</strong></td><td><strong>USD 29,40 M</strong> (83,5%)</td><td><strong>USD 22,50 M</strong> (76,8%)</td></tr>
+                <tr class="row-highlight"><td><strong>Margen Neto Contable Año 1</strong></td><td><strong>33,50%</strong></td><td><strong>21,40% (Mínimo)</strong></td></tr>
+                <tr><td><strong>Payback del Proyecto</strong></td><td><strong>5,71 años</strong></td><td><strong>7,82 años</strong></td></tr>
+                <tr class="row-highlight"><td><strong>Payback del Capital (Equity)</strong></td><td><strong>4,30 años</strong></td><td><strong>6,85 años</strong></td></tr>
+                <tr><td><strong>TIR del Proyecto (USD)</strong></td><td><strong>15,40% anual</strong></td><td><strong>10,45% anual</strong></td></tr>
+                <tr class="row-highlight"><td><strong>TIR del Capital Equity (USD)</strong></td><td><strong>22,30% anual</strong></td><td><strong>14,10% anual</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- OFERTA 4 TRANSPUESTA -->
+          <div class="print-offer-box">
+            <div class="print-offer-header">
+              OFERTA 4: Parque Regional para Distribuidoras y Cooperativas
+              <span class="print-offer-meta">Cumplimiento 75% Mercado a Término (Res. SE 400/2025): Solar 60 MWac + BESS 80 MWh | Cliente: Público Prov. / Coop.</span>
+            </div>
+            <table class="print-transposed-table">
+              <thead>
+                <tr>
+                  <th>Indicador Auditado</th>
+                  <th>Caso Base (P50)</th>
+                  <th>Peor Caso (P90 Mín.)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>CAPEX All-In Total</strong></td><td>USD 58,00 M</td><td>USD 62,00 M</td></tr>
+                <tr><td><strong>Financiación 50% Turquía</strong></td><td>USD 29,00 M (7,20%)</td><td>USD 31,00 M (7,80%)</td></tr>
+                <tr><td><strong>EBITDA Operativo Año 1</strong></td><td><strong>USD 9,20 M</strong> (81,4%)</td><td><strong>USD 7,25 M</strong> (74,7%)</td></tr>
+                <tr class="row-highlight"><td><strong>Margen Neto Contable Año 1</strong></td><td><strong>29,10%</strong></td><td><strong>17,85% (Mínimo)</strong></td></tr>
+                <tr><td><strong>Payback del Proyecto</strong></td><td><strong>6,30 años</strong></td><td><strong>8,55 años</strong></td></tr>
+                <tr class="row-highlight"><td><strong>Payback del Capital (Equity)</strong></td><td><strong>4,88 años</strong></td><td><strong>7,70 años</strong></td></tr>
+                <tr><td><strong>TIR del Proyecto (USD)</strong></td><td><strong>13,50% anual</strong></td><td><strong>9,10% anual</strong></td></tr>
+                <tr class="row-highlight"><td><strong>TIR del Capital Equity (USD)</strong></td><td><strong>19,15% anual</strong></td><td><strong>11,95% anual</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- OFERTA 5 TRANSPUESTA -->
+          <div class="print-offer-box">
+            <div class="print-offer-header">
+              OFERTA 5: Red de 20 Pabellones de Electrogasolineras Viales
+              <span class="print-offer-meta">120 Cargadores DC (180–360 kW) + Marquesinas FV (10 MWp) + BESS Buffer (20 MWh) | Cliente: Público Vial / Privado</span>
+            </div>
+            <table class="print-transposed-table">
+              <thead>
+                <tr>
+                  <th>Indicador Auditado</th>
+                  <th>Caso Base (P50)</th>
+                  <th>Peor Caso (P90 Mín.)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>CAPEX All-In Total</strong></td><td>USD 33,00 M</td><td>USD 35,00 M</td></tr>
+                <tr><td><strong>Financiación 50% Turquía</strong></td><td>USD 16,50 M (7,20%)</td><td>USD 17,50 M (7,80%)</td></tr>
+                <tr><td><strong>EBITDA Operativo Año 1</strong></td><td><strong>USD 6,45 M</strong> (74,1%)</td><td><strong>USD 5,15 M</strong> (69,6%)</td></tr>
+                <tr class="row-highlight"><td><strong>Margen Neto Contable Año 1</strong></td><td><strong>34,20%</strong></td><td><strong>22,10% (Mínimo)</strong></td></tr>
+                <tr><td><strong>Payback del Proyecto</strong></td><td><strong>5,12 años</strong></td><td><strong>6,80 años</strong></td></tr>
+                <tr class="row-highlight"><td><strong>Payback del Capital (Equity)</strong></td><td><strong>3,84 años</strong></td><td><strong>6,05 años</strong></td></tr>
+                <tr><td><strong>TIR del Proyecto (USD)</strong></td><td><strong>17,80% anual</strong></td><td><strong>12,40% anual</strong></td></tr>
+                <tr class="row-highlight"><td><strong>TIR del Capital Equity (USD)</strong></td><td><strong>26,40% anual</strong></td><td><strong>17,20% anual</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- OFERTA 6 TRANSPUESTA -->
+          <div class="print-offer-box">
+            <div class="print-offer-header">
+              OFERTA 6: Planta Modular Hidrógeno Verde (H2V 100 MW) y NH3
+              <span class="print-offer-meta">Acoplamiento DC-Coupled para Siderurgia Verde (DRI) y Exportación 0% Retenciones RIGI | Cliente: Industrial / Export.</span>
+            </div>
+            <table class="print-transposed-table">
+              <thead>
+                <tr>
+                  <th>Indicador Auditado</th>
+                  <th>Caso Base (P50)</th>
+                  <th>Peor Caso (P90 Mín.)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>CAPEX All-In Total</strong></td><td>USD 235,00 M</td><td>USD 248,00 M</td></tr>
+                <tr><td><strong>Financiación 50% Turquía</strong></td><td>USD 117,50 M (7,20%)</td><td>USD 124,00 M (7,80%)</td></tr>
+                <tr><td><strong>EBITDA Operativo Año 1</strong></td><td><strong>USD 36,80 M</strong> (81,1%)</td><td><strong>USD 29,20 M</strong> (75,3%)</td></tr>
+                <tr class="row-highlight"><td><strong>Margen Neto Contable Año 1</strong></td><td><strong>30,20%</strong></td><td><strong>18,40% (Mínimo)</strong></td></tr>
+                <tr><td><strong>Payback del Proyecto</strong></td><td><strong>6,39 años</strong></td><td><strong>8,49 años</strong></td></tr>
+                <tr class="row-highlight"><td><strong>Payback del Capital (Equity)</strong></td><td><strong>4,95 años</strong></td><td><strong>7,62 años</strong></td></tr>
+                <tr><td><strong>TIR del Proyecto (USD)</strong></td><td><strong>13,30% anual</strong></td><td><strong>9,20% anual</strong></td></tr>
+                <tr class="row-highlight"><td><strong>TIR del Capital Equity (USD)</strong></td><td><strong>18,85% anual</strong></td><td><strong>12,10% anual</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- OFERTA 7 TRANSPUESTA (ANCHO COMPLETO) -->
+          <div class="print-offer-box print-offer-box-full">
+            <div class="print-offer-header">
+              OFERTA 7: Licitación Parcial de Equipos por Lotes (Supply-Only — Paneles TOPCon, Inversores, Trackers, BESS, STS y Cargadores EV)
+              <span class="print-offer-meta">Cliente Objetivo: Entes Públicos, Distribuidoras, Cooperativas, Empresas Privadas y Constructoras EPCistas (Lotes desde USD 1,5M a USD 50M+)</span>
+            </div>
+            <table class="print-transposed-table">
+              <thead>
+                <tr>
+                  <th>Indicador Auditado (Lote Tipo USD 16M–17M)</th>
+                  <th>Caso Base Realista (P50)</th>
+                  <th>Peor Caso Admisible (P90 — Piso con Margen Mínimo)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>Monto Lote Tipo / Financiación 50% Turquía</strong></td><td>USD 16,00 M (USD 8,00 M financiados a 12a al 7,20%)</td><td>USD 17,00 M (USD 8,50 M financiados a 12a al 7,80%)</td></tr>
+                <tr class="row-highlight"><td><strong>Margen Neto Comercial sobre CIF y EBITDA</strong></td><td><strong>18,00% Margen Base</strong> (EBITDA: <strong>USD 2,88 M</strong>)</td><td><strong>12,00% Margen Mínimo Garantizado</strong> (EBITDA: <strong>USD 2,04 M</strong>)</td></tr>
+                <tr><td><strong>Rotación de Capital / TIR Comercial (USD)</strong></td><td><strong>Payback: 1,35 años</strong> | <strong>TIR Equity: 32,50%</strong></td><td><strong>Payback: 2,15 años</strong> | <strong>TIR Equity: 21,60%</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- TABLA RESUMEN COMPARATIVA DE LOS TOTALES AL FINAL -->
+        <div class="print-summary-box">
+          <div class="print-summary-title">📊 Tabla Resumen Comparativa de Totales y Promedios Ponderados del Portafolio</div>
+          <table class="print-transposed-table">
+            <thead>
+              <tr>
+                <th>Oferta / Línea de Servicio</th>
+                <th>CAPEX All-In<br><small>(Base P50 / Peor P90)</small></th>
+                <th>Financiación 50%<br><small>(Base P50 / Peor P90)</small></th>
+                <th>EBITDA Año 1<br><small>(Base P50 / Peor P90)</small></th>
+                <th>Margen Neto Año 1<br><small>(Peor P90 / Base P50)</small></th>
+                <th>Payback y TIR Equity<br><small>(Base P50 vs. Peor P90)</small></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1. Hub VPU RIGI Integral (250 MWac + BESS + EV)</strong></td>
+                <td>USD 265,0M / 275,0M</td>
+                <td>USD 132,5M / 137,5M</td>
+                <td>USD 43,52M / 31,70M</td>
+                <td><strong>19,20%</strong> / 31,61%</td>
+                <td><strong>4,65a (20,1%)</strong> / 7,66a (12,0%)</td>
+              </tr>
+              <tr>
+                <td><strong>2. Licitación BESS + Solar (AlmaSADI / AlmaGBA)</strong></td>
+                <td>USD 112,0M / 118,0M</td>
+                <td>USD 56,0M / 59,0M</td>
+                <td>USD 17,90M / 13,60M</td>
+                <td><strong>18,10%</strong> / 29,80%</td>
+                <td><strong>4,82a (19,4%)</strong> / 7,58a (12,3%)</td>
+              </tr>
+              <tr>
+                <td><strong>3. Central Híbrida Minera 24/7 (Black-Start)</strong></td>
+                <td>USD 168,0M / 176,0M</td>
+                <td>USD 84,0M / 88,0M</td>
+                <td>USD 29,40M / 22,50M</td>
+                <td><strong>21,40%</strong> / 33,50%</td>
+                <td><strong>4,30a (22,3%)</strong> / 6,85a (14,1%)</td>
+              </tr>
+              <tr>
+                <td><strong>4. Parque Regional Distribuidoras y Cooperativas</strong></td>
+                <td>USD 58,0M / 62,0M</td>
+                <td>USD 29,0M / 31,0M</td>
+                <td>USD 9,20M / 7,25M</td>
+                <td><strong>17,85%</strong> / 29,10%</td>
+                <td><strong>4,88a (19,2%)</strong> / 7,70a (12,0%)</td>
+              </tr>
+              <tr>
+                <td><strong>5. Red de 20 Pabellones de Electrogasolineras</strong></td>
+                <td>USD 33,0M / 35,0M</td>
+                <td>USD 16,5M / 17,5M</td>
+                <td>USD 6,45M / 5,15M</td>
+                <td><strong>22,10%</strong> / 34,20%</td>
+                <td><strong>3,84a (26,4%)</strong> / 6,05a (17,2%)</td>
+              </tr>
+              <tr>
+                <td><strong>6. Planta Modular Hidrógeno Verde (H2V) y NH3</strong></td>
+                <td>USD 235,0M / 248,0M</td>
+                <td>USD 117,5M / 124,0M</td>
+                <td>USD 36,80M / 29,20M</td>
+                <td><strong>18,40%</strong> / 30,20%</td>
+                <td><strong>4,95a (18,9%)</strong> / 7,62a (12,1%)</td>
+              </tr>
+              <tr>
+                <td><strong>7. Licitación Parcial de Equipos (Lote Tipo)</strong></td>
+                <td>USD 16,0M / 17,0M</td>
+                <td>USD 8,0M / 8,5M</td>
+                <td>USD 2,88M / 2,04M</td>
+                <td><strong>12,00%</strong> / 18,00%</td>
+                <td><strong>1,35a (32,5%)</strong> / 2,15a (21,6%)</td>
+              </tr>
+              <tr class="row-total-portfolio">
+                <td><strong>TOTALES / PROMEDIOS PONDERADOS PORTAFOLIO (1–7)</strong></td>
+                <td><strong>USD 887,0M / 931,0M</strong></td>
+                <td><strong>USD 443,5M / 465,5M</strong></td>
+                <td><strong>USD 146,15M / 111,44M</strong></td>
+                <td><strong>19,21% Mín. / 31,08%</strong></td>
+                <td><strong>4,58a (20,6%) / 7,32a (12,8%)</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
 
       <div class="alert-box">
