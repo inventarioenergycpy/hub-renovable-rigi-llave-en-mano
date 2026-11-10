@@ -36,18 +36,19 @@
     }
 
     /* ==========================================================================
-       MARCA DE AGUA CENTRADA AL MEDIO DE LA HOJA (LO MÁS GRANDE QUE QUEPA)
-       Transparencia del 60% (opacidad 0.40 por defecto)
+       MARCA DE AGUA CENTRADA AL MEDIO DE CADA HOJA (LO MÁS GRANDE QUE QUEPA)
+       Transparencia del 60% (opacidad 0.40 por defecto) — Repetición en toda hoja
+       y adaptable a cualquier tamaño u orientación de papel configurado.
        ========================================================================== */
     .page-watermark {
       position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 96vw;
-      height: 92vh;
-      max-width: 96%;
-      max-height: 92%;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      transform: none;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -57,8 +58,10 @@
     }
 
     .page-watermark img {
-      width: 100%;
-      height: 100%;
+      width: 94%;
+      height: 90%;
+      max-width: 94%;
+      max-height: 90%;
       object-fit: contain;
       object-position: center center;
       opacity: var(--watermark-opacity);
@@ -653,13 +656,24 @@
 
     @media print {
       @page {
+        /* Sin restricción de size: se adapta a A4, Carta, Oficio, A3, Vertical u Horizontal */
         margin: 10mm;
       }
 
-      body {
+      html {
         background: #ffffff !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+
+      body {
+        background: transparent !important;
         color: #000000 !important;
         padding: 0 !important;
+        margin: 0 !important;
+        position: static !important;
+        transform: none !important;
+        overflow: visible !important;
         -webkit-print-color-adjust: exact !important;
         print-color-adjust: exact !important;
       }
@@ -668,25 +682,30 @@
         display: none !important;
       }
 
-      /* Marca de agua centrada al medio en cada página impresa lo más grande que quepa */
+      /* Marca de agua centrada al medio en cada página impresa lo más grande que quepa sin importar el tamaño de hoja */
       .page-watermark {
         position: fixed !important;
-        top: 50% !important;
-        left: 50% !important;
-        transform: translate(-50%, -50%) !important;
-        width: 96vw !important;
-        height: 92vh !important;
-        max-width: 98% !important;
-        max-height: 94% !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        max-width: 100% !important;
+        max-height: 100% !important;
+        transform: none !important;
         z-index: 0 !important;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
+        pointer-events: none !important;
       }
 
       .page-watermark img {
-        width: 100% !important;
-        height: 100% !important;
+        width: 94% !important;
+        height: 90% !important;
+        max-width: 94% !important;
+        max-height: 90% !important;
         object-fit: contain !important;
         object-position: center center !important;
         opacity: var(--watermark-opacity) !important;
@@ -694,8 +713,10 @@
 
       .container {
         max-width: 100% !important;
+        width: 100% !important;
         padding: 0 !important;
         margin: 0 !important;
+        background: transparent !important;
         position: relative !important;
         z-index: 2 !important;
       }

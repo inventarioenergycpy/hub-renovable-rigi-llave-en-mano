@@ -114,42 +114,72 @@ const ENERGY_CPY_EXPORT_REGISTRY = {
 
 ## 4. Especificación CSS del Módulo Imprimible (`@media print` & `.print-preview`)
 
-### 4.1. Marca de Agua Centrada al 60% de Transparencia (`opacity: 0.40`)
-```css
-/* Contenedor de Marca de Agua en cada Hoja Imprimible */
-.ecpy-print-watermark,
-.slide-watermark,
-.one-pager-watermark {
-  position: absolute !important;
-  top: 50% !important;
-  left: 50% !important;
-  transform: translate(-50%, -50%) !important;
-  width: 94% !important;
-  height: 90% !important;
-  max-width: 94% !important;
-  max-height: 90% !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  pointer-events: none !important;
-  user-select: none !important;
-  z-index: 0 !important;
-  border: none !important;
-  padding: 0 !important;
-}
+### 4.1. Marca de Agua Centrada al 60% de Transparencia (`opacity: 0.40`) con Repetición Garantizada en Cada Hoja y Cualquier Tamaño de Papel
+Para garantizar que el logo (`logo Energy CPY 4v fondo transparente_.png`) aparezca **en cada hoja que se vaya a imprimir** con su tamaño máximo proporcional (`94% x 90%`, `object-fit: contain`) y 60% de transparencia (`opacity: 0.40`) **sin importar el tamaño u orientación de hoja configurado en la impresora** (A4, Carta/Letter, Oficio/Legal, A3, Vertical/Portrait u Horizontal/Landscape):
 
-.ecpy-print-watermark img,
-.slide-watermark img,
-.one-pager-watermark img {
-  width: 100% !important;
-  height: 100% !important;
-  max-width: 100% !important;
-  max-height: 100% !important;
-  object-fit: contain !important;
-  opacity: 0.40 !important; /* 60% de transparencia solicitada */
-  filter: none !important;
-  -webkit-print-color-adjust: exact !important;
-  print-color-adjust: exact !important;
+1. **Hijo directo de `<body>` (`body > #ecpyGlobalPrintWatermark` o `body > .page-watermark`)**: El contenedor de marca de agua de impresión debe ubicarse como hijo directo de `<body>` con `position: fixed !important; top: 0 !important; left: 0 !important; right: 0 !important; bottom: 0 !important; width: 100% !important; height: 100% !important; transform: none !important;`.
+2. **Prohibición de bloqueo de tamaño en `@page`**: `@page` solo define márgenes (`margin: 8mm;` o `10mm;`) y **no** bloquea `size: A4 portrait`, permitiendo que el motor Paged Media adapte el contenedor `100% x 100%` automáticamente al área imprimible de cualquier hoja seleccionada por el usuario.
+3. **Neutralización de contenedores intermedios**: En `@media print`, `body` y todos los contenedores intermedios (`.modal-backdrop`, `#onePagerModal`, `.one-pager-modal-container`, `.one-pager-sheet-scroll`, `.one-pager-sheet`, `.container`) deben tener `background: transparent !important; transform: none !important; animation: none !important; filter: none !important; backdrop-filter: none !important; -webkit-backdrop-filter: none !important;` para no atrapar `position: fixed` ni pintar fondos blancos opacos sobre la marca de agua en las hojas 2, 3, ... $N$.
+
+```css
+/* Contenedor Global Fijo de Marca de Agua en CADA Hoja Imprimible (Cualquier Tamaño de Papel) */
+@media print {
+  @page {
+    margin: 8mm !important; /* Sin restricción de size: adaptable a A4, Carta, Oficio, A3, Vertical/Horizontal */
+  }
+
+  html {
+    background: #ffffff !important;
+  }
+
+  body, #onePagerModal, .one-pager-modal-container, .one-pager-sheet-scroll, .one-pager-sheet, .container {
+    background: transparent !important;
+    transform: none !important;
+    animation: none !important;
+    filter: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    overflow: visible !important;
+  }
+
+  #ecpyGlobalPrintWatermark,
+  .ecpy-global-print-watermark,
+  .page-watermark {
+    display: flex !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    transform: none !important;
+    align-items: center !important;
+    justify-content: center !important;
+    pointer-events: none !important;
+    user-select: none !important;
+    z-index: 0 !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  #ecpyGlobalPrintWatermark img,
+  .ecpy-global-print-watermark img,
+  .page-watermark img {
+    width: 94% !important;
+    height: 90% !important;
+    max-width: 94% !important;
+    max-height: 90% !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+    opacity: 0.40 !important; /* 60% de transparencia solicitada */
+    filter: none !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
 }
 ```
 
@@ -220,3 +250,4 @@ function buildTransposedTablesHtml(items, schema, summaryConfig) { ... }
 - [`docs/01-Presentacion-Comercial-Blind-Teaser.md`](file:///C:/Users/majon/.gemini/antigravity-ide/scratch/hub-renovable-rigi-llave-en-mano/docs/01-Presentacion-Comercial-Blind-Teaser.md)
 - [`docs/05-Auditoria-Precios-Actuales-y-Stress-Test-Peor-Caso.md`](file:///C:/Users/majon/.gemini/antigravity-ide/scratch/hub-renovable-rigi-llave-en-mano/docs/05-Auditoria-Precios-Actuales-y-Stress-Test-Peor-Caso.md)
 - [`presentacion-servicios-ejecutiva.html`](file:///C:/Users/majon/.gemini/antigravity-ide/scratch/hub-renovable-rigi-llave-en-mano/presentacion-servicios-ejecutiva.html)
+
