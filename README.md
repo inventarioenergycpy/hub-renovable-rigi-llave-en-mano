@@ -14,7 +14,8 @@ El repositorio está estructurado bajo el **Protocolo de Doble Capa Documental y
 | **2. Estudio de Mercado, Oportunidades y Riesgos de la Fábrica Asociada (Dossier Interno Reservado)** | Análisis exhaustivo de nuestra fábrica asociada en Turquía (**Daxler Energy — `Daxler Enerji A.Ş.`**, Konya, planta de $100.000\text{ m}^2$, $1\text{ GW/año}$, grupo *Endüstriyel Elektrik* fundado en 1988), oportunidades estratégicas y matriz de 5 riesgos con sus cláusulas de mitigación bancable. | [`docs/02-Estudio-Mercado-Oportunidades-Riesgos-Daxler-Reservado.md`](docs/02-Estudio-Mercado-Oportunidades-Riesgos-Daxler-Reservado.md) |
 | **3. Catálogo de Entes Oficiales de Referencia para Cálculos** | Marco normativo y fórmulas de referencia obligatoria (**CAMMESA, Secretaría de Energía, ENRE, ERSeP/EPEC, Comité RIGI Ley 27.742, BCRA, ARCA, Turk Eximbank, INTI/CIRSOC, IEC/IEEE 2800, IRENA, BloombergNEF, NASA POWER e IDECOR**). | [`docs/03-Marco-Entes-Oficiales-Referencia-Calculos.md`](docs/03-Marco-Entes-Oficiales-Referencia-Calculos.md) |
 | **4. Tarea Automatizada: Radar Web de Noticias, Licitaciones, Requisitos y Motor Financiero** | Script Python y Tarea de VS Code que releva noticias y licitaciones en vivo en la web (con *pacing* $\ge 450\text{ ms}$), extrae los requisitos para participar y calcula el flujo de fondos DCF a 20 años para las **6 líneas de servicios Llave en Mano**. | [`scripts/radar_licitaciones_y_oportunidades.py`](scripts/radar_licitaciones_y_oportunidades.py) |
-| **5. Reporte Ejecutivo Generado por el Radar** | Última corrida del Radar con noticias vigentes, tabla comparativa de las 6 oportunidades (`OPP-01` a `OPP-06`), requisitos de pliego y métricas de VAN, TIR y Payback. | [`reports/Reporte-Radar-Licitaciones-Oportunidades.md`](reports/Reporte-Radar-Licitaciones-Oportunidades.md) |
+| **5. Reporte Ejecutivo Generado por el Radar** | Última corrida del Radar con noticias vigentes, tabla comparativa de las 7 oportunidades (`OPP-01` a `OPP-07`), requisitos de pliego y métricas de VAN, TIR y Payback. | [`reports/Reporte-Radar-Licitaciones-Oportunidades.md`](reports/Reporte-Radar-Licitaciones-Oportunidades.md) |
+| **6. Brochure y Presentación de Servicios (Público, Privado y Licitación de Equipos)** | Presentación corporativa lista para utilizar ante Entes Públicos y Empresas Privadas (tanto en modalidad Llave en Mano como en Licitaciones Parciales de Paneles, Inversores, Trackers, BESS y Cargadores EV). | [`docs/04-Brochure-Presentacion-Servicios-Publico-Privado-y-Licitaciones-Parciales.md`](docs/04-Brochure-Presentacion-Servicios-Publico-Privado-y-Licitaciones-Parciales.md) y [`presentacion-servicios-ejecutiva.html`](presentacion-servicios-ejecutiva.html) |
 
 ---
 
@@ -30,6 +31,7 @@ Todas las líneas cuentan con la posibilidad de **financiación del 50% del CAPE
 | **OPP-04** | **Contractualización 75% Distribuidoras (Decreto 450/2025)**: Solar $60\text{ MW}_{\text{ac}}$ + BESS Nivelador $20\text{ MW}/80\text{ MWh}$ | USD 51.000.000 | USD 25.500.000 | **USD 13.100.000** | **19,35%** | **30,43%** | **4,42 años** | **3,03 años** | 2,99x |
 | **OPP-05** | **Red de 20 Pabellones de Electrogasolineras Viales (*Solar-to-Wheel*)**: 120 Cargadores DC + $10\text{ MWp}$ FV + $20\text{ MWh}$ BESS | USD 30.000.000 | USD 15.000.000 | **USD 17.538.000** | **40,76%** | **69,95%** | **2,26 años** | **1,40 años** | 5,45x |
 | **OPP-06** | **Planta Modular Hidrógeno Verde ($\text{H}_2\text{V}$ $100\text{ MW}$) & Amoníaco Verde ($\text{NH}_3$)**: Acoplada en CC para Acero Verde / Exportación RIGI | USD 215.000.000 | USD 107.500.000 | **USD 54.100.000** | **22,68%** | **36,52%** | **3,94 años** | **2,56 años** | 3,73x |
+| **OPP-07** | **Licitaciones Parciales de Equipos por Lotes (Público/Privado — Ref. 50 MWp)**: Paneles TOPCon, Inversores, Trackers, BESS, STS y Cargadores EV | USD 22.500.000 | USD 11.250.000 | **USD 6.800.000** | **22,97%** | **37,22%** | **3,89 años** | **2,51 años** | 3,54x |
 
 ---
 
@@ -47,3 +49,4 @@ Todas las líneas cuentan con la posibilidad de **financiación del 50% del CAPE
 
 ### Opción C: Tarea Nativa en el IDE
 Ejecutar `Terminal -> Run Build Task...` (`Ctrl+Shift+B`), que invocará automáticamente la tarea **`Ejecutar Radar Web de Licitaciones, Requisitos y Análisis Financiero`** configurada en [`.vscode/tasks.json`](.vscode/tasks.json).
+

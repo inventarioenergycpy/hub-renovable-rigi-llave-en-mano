@@ -1,5 +1,5 @@
 {
-  "timestamp_ejecucion": "2026-11-10 11:43:29",
+  "timestamp_ejecucion": "2026-11-10 12:02:44",
   "protocolo_confidencialidad": "BLIND TEASER ACTIVO (Nombre del fabricante turco reservado bajo NCNDA)",
   "noticias_relevadas_web": [
     {
@@ -305,6 +305,42 @@
         "dscr_minimo": 3.4,
         "dscr_promedio": 3.76,
         "regimen_fiscal": "RIGI Ley 27.742 (Ganancias 25%, Amort. 2 años, Arancel 0%)"
+      }
+    },
+    {
+      "id": "OPP-07",
+      "nombre": "Licitaciones Parciales de Provisión de Equipos por Lotes (Paneles TOPCon, Inversores, Trackers, BESS, STS y Cargadores EV para Entes Públicos y Privados)",
+      "tipo_convocatoria": "Licitaciones Públicas y Privadas de Suministro de Equipos (Supply-Only / Split-Package Procurement para Distribuidoras, Provincias, Municipios, Mineras y EPCistas)",
+      "entes_oficiales_referencia": [
+        "Dirección General de Aduanas / ARCA",
+        "INTI / IRAM / IEC 61215 & 61730",
+        "IEEE 2800 / CIRSOC 102",
+        "CAMMESA (Homologación SMEC / SOTR)"
+      ],
+      "servicio_llave_en_mano_ofrecido": "Provisión Directa de Fábrica (Turquía, 1 GW/año) con Financiación del 50% a 12 años (5,80% USD) de Lotes Individuales o Combinados: Módulos N-Type TOPCon Bifaciales, Trackers 1P/2P, Inversores String/Grid-Forming, Contenedores BESS LFP, Celdas/Tableros MT y Cargadores DC EV (Lote de Referencia: 50 MWp)",
+      "requisitos_para_participar": [
+        "Certificaciones internacionales IEC 61215, IEC 61730, CE, ISO 9001/14001/45001 y ensayos de electroluminiscencia EL al 100% pre-embarque (FAT).",
+        "Garantía de Mantenimiento de Oferta y Garantía de Cumplimiento de Suministro (Performance Bond 10%) con Seguro de Rendimiento Lineal a 25-30 años.",
+        "Estructuración de Carta de Crédito / Buyer's Credit ECA por el 50% del lote de equipamiento a favor del ente público, distribuidora o empresa privada compradora."
+      ],
+      "analisis_financiero": {
+        "capex_usd": 22500000,
+        "financiacion_turquia_50pct_usd": 11250000.0,
+        "equity_requerido_50pct_usd": 11250000.0,
+        "ingresos_anuales_yr1_usd": 7450000,
+        "opex_anual_yr1_usd": 650000,
+        "ebitda_anual_yr1_usd": 6800000,
+        "margen_ebitda_pct": 91.28,
+        "cuota_anual_deuda_usd": 1327192.58,
+        "van_proyecto_usd": 30595069.17,
+        "tir_proyecto_pct": 23.02,
+        "payback_proyecto_anios": 4.27,
+        "van_equity_usd": 25230429.19,
+        "tir_equity_pct": 36.88,
+        "payback_equity_anios": 2.73,
+        "dscr_minimo": 3.64,
+        "dscr_promedio": 4.07,
+        "regimen_fiscal": "Régimen General + Ley 27.191 (Ganancias 35%, Bono Fiscal)"
       }
     }
   ]

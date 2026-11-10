@@ -1,6 +1,6 @@
 ---
 title: "Reporte Automatizado: Radar Web de Noticias, Licitaciones, Requisitos y Análisis Financiero de Oportunidades Llave en Mano"
-fecha_actualizacion: "2026-11-10 11:43"
+fecha_actualizacion: "2026-11-10 12:02"
 modo_confidencialidad: "BLIND TEASER (Sin revelar razón social del Socio Industrial Turco)"
 ---
 
@@ -40,6 +40,7 @@ modo_confidencialidad: "BLIND TEASER (Sin revelar razón social del Socio Indust
 | **OPP-04** | Contractualización Obligatoria del 75% de Distribuidoras y Cooperati... | USD 51,000,000 | USD 25,500,000 | **USD 13,100,000** | 88.22% | **19.73%** | **30.82%** | **4.89 años** | **3.25 años** | 3.55x |
 | **OPP-05** | Red de 20 Pabellones de Electrogasolineras Viales y Hubs para Flotas... | USD 30,000,000 | USD 15,000,000 | **USD 17,538,000** | 78.51% | **41.96%** | **73.73%** | **2.4 años** | **1.36 años** | 7.28x |
 | **OPP-06** | Planta Modular de Hidrógeno Verde (H2V 100 MW) y Amoníaco Verde (NH3... | USD 215,000,000 | USD 107,500,000 | **USD 54,100,000** | 87.97% | **22.69%** | **36.53%** | **3.93 años** | **2.57 años** | 3.76x |
+| **OPP-07** | Licitaciones Parciales de Provisión de Equipos por Lotes (Paneles TO... | USD 22,500,000 | USD 11,250,000 | **USD 6,800,000** | 91.28% | **23.02%** | **36.88%** | **4.27 años** | **2.73 años** | 4.07x |
 
 ---
 
@@ -166,5 +167,25 @@ modo_confidencialidad: "BLIND TEASER (Sin revelar razón social del Socio Indust
 - **Rentabilidad del Proyecto (Unlevered)**: **VAN = `USD 267,664,540.71`** | **TIR Proyecto = `22.69%`** | **Payback = `3.93 años`**
 - **Rentabilidad del Inversor (Levered Equity)**: **VAN Equity = `USD 218,091,281.01`** | **TIR Equity = `36.53%`** | **Payback Equity = `2.57 años`**
 - **Solvencia Bancaria**: Cuota anual deuda = `USD 12,682,062.39` | **DSCR Mínimo = `3.4x`** | **DSCR Promedio = `3.76x`**
+
+---
+
+### 🎯 OPP-07: Licitaciones Parciales de Provisión de Equipos por Lotes (Paneles TOPCon, Inversores, Trackers, BESS, STS y Cargadores EV para Entes Públicos y Privados)
+- **Marco / Convocatoria**: Licitaciones Públicas y Privadas de Suministro de Equipos (Supply-Only / Split-Package Procurement para Distribuidoras, Provincias, Municipios, Mineras y EPCistas)
+- **Entes Oficiales de Referencia**: Dirección General de Aduanas / ARCA, INTI / IRAM / IEC 61215 & 61730, IEEE 2800 / CIRSOC 102, CAMMESA (Homologación SMEC / SOTR)
+- **Paquete de Servicios Llave en Mano Ofrecido**: Provisión Directa de Fábrica (Turquía, 1 GW/año) con Financiación del 50% a 12 años (5,80% USD) de Lotes Individuales o Combinados: Módulos N-Type TOPCon Bifaciales, Trackers 1P/2P, Inversores String/Grid-Forming, Contenedores BESS LFP, Celdas/Tableros MT y Cargadores DC EV (Lote de Referencia: 50 MWp)
+- **Régimen Impositivo Aplicado**: Régimen General + Ley 27.191 (Ganancias 35%, Bono Fiscal)
+
+#### 📋 Requisitos Técnicos, Legales y Financieros para Participar:
+- [x] Certificaciones internacionales IEC 61215, IEC 61730, CE, ISO 9001/14001/45001 y ensayos de electroluminiscencia EL al 100% pre-embarque (FAT).
+- [x] Garantía de Mantenimiento de Oferta y Garantía de Cumplimiento de Suministro (Performance Bond 10%) con Seguro de Rendimiento Lineal a 25-30 años.
+- [x] Estructuración de Carta de Crédito / Buyer's Credit ECA por el 50% del lote de equipamiento a favor del ente público, distribuidora o empresa privada compradora.
+
+#### 💰 Resumen de Viabilidad Financiera (Con 50% Financiación del Socio Turco al 5,80% anual):
+- **CAPEX Total Llave en Mano**: `USD 22,500,000.00` (`USD 11,250,000.00` Deuda Socio Turco + `USD 11,250,000.00` Equity)
+- **Facturación Año 1**: `USD 7,450,000.00` | **OPEX Año 1**: `USD 650,000.00` | **EBITDA Año 1**: `USD 6,800,000.00` (**Margen: 91.28%**)
+- **Rentabilidad del Proyecto (Unlevered)**: **VAN = `USD 30,595,069.17`** | **TIR Proyecto = `23.02%`** | **Payback = `4.27 años`**
+- **Rentabilidad del Inversor (Levered Equity)**: **VAN Equity = `USD 25,230,429.19`** | **TIR Equity = `36.88%`** | **Payback Equity = `2.73 años`**
+- **Solvencia Bancaria**: Cuota anual deuda = `USD 1,327,192.58` | **DSCR Mínimo = `3.64x`** | **DSCR Promedio = `4.07x`**
 
 ---

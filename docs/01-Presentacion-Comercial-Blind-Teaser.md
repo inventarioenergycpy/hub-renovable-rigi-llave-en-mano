@@ -107,3 +107,19 @@ El suministro del equipamiento fotovoltaico principal y la estructuración del *
 El proyecto deja pre-instalado un **barraje colector en corriente continua ($1.500\text{ V}_{\text{dc}}$ *DC-Coupled*)** y bahías de ampliación en la subestación para conectar en **Fase II hasta $100\text{ MW}$ de Electrolizadores (PEM / Alcalinos)**:
 - **Ahorro Energético y de Capital**: Al acoplar los electrolizadores directamente en corriente continua al campo solar y al BESS mediante convertidores *DC/DC*, se evita la pérdida del $5,5\%$ de la doble conversión AC/DC y se reduce un $18\%$ el CAPEX eléctrico de la planta de hidrógeno.
 - **Producción Competitiva y Exportación con 0% de Retenciones (RIGI)**: A partir del Año 3–4 (con el capital propio ya amortizado), la planta produce **$12.500\text{ ton/año de H}_2\text{V}$** a un costo nivelado **$\text{LCOH} \approx \text{USD } 2,15\text{–}2,45/\text{kg H}_2$** (o **$70.000\text{ ton/año de Amoníaco Verde } \text{NH}_3$** vía proceso Haber-Bosch a $-33^\circ\text{C}$), destinado a siderurgia verde (DRI sin arancel europeo CBAM), transporte pesado a celdas de combustible en nuestras Electrogasolineras y exportación marítima desde puertos argentinos y latinoamericanos.
+
+---
+
+## 5. Alcance para Entes Públicos y Privados & Participación en Licitaciones Parciales de Equipos
+
+Además de la ejecución de proyectos integrales **Llave en Mano (Full Turnkey EPC)**, nuestra estructura opera con total flexibilidad junto a **Entes Públicos (Nacionales, Provinciales, Municipales, Distribuidoras y Cooperativas)** y **Empresas Privadas (Industrias GUDIs, Mineras, Agroindustria y Desarrolladores/EPCistas)**, presentándonos también a **licitaciones parciales de provisión de equipamiento por lotes** con **financiación directa de fábrica del 50%**:
+
+1. **Licitación de Módulos Fotovoltaicos**: Paneles *N-Type TOPCon* Bifaciales ($550\text{ Wp}$ a $720\text{ Wp+}$), arquitectura *SMBB* y corte láser no destructivo (*NDC*), paneles doble vidrio anti-granizo y módulos especiales/translúcidos para marquesinas (*Solar Carports*).
+2. **Licitación de Inversores y Centros de Transformación (STS)**: Inversores *String* $1.500\text{ V}_{\text{dc}}$ ($100\text{–}350\text{ kW}$), inversores PCS *Grid-Forming* (norma IEEE 2800) y estaciones compactas *Skid Twin Station* ($3.000\text{ a } 9.000\text{ kVA}$ en $13,2/33\text{ kV}$).
+3. **Licitación de Seguidores Solares (*Trackers*) y Estructuras**: Trackers 1P y 2P con *Backtracking* astronómico 3D, defensa de viento certificada bajo **CIRSOC 102**, estructuras fijas y marquesinas vehiculares.
+4. **Licitación de Bancos de Baterías BESS ($\text{LiFePO}_4$)**: Contenedores refrigerados por líquido ($1\text{ a } 5\text{ MWh}$ por unidad, 2h a 4h) para estabilización de líneas y licitaciones de potencia firme (**AlmaSADI / AlmaGBA**).
+5. **Licitación de Tableros Eléctricos, Celdas MT, SCADA y Medición SMEC/SOTR**: Respaldado por los 38 años de trayectoria de nuestra fábrica asociada en automatización industrial y tableros de potencia.
+6. **Licitación de Cargadores de Vehículos Eléctricos**: Surtidores ultra-rápidos DC ($60\text{–}360\text{ kW}$ CCS2/NACS) y cargadores AC ($7,4\text{–}22\text{ kW}$) con software OCPP 2.0.1.
+
+👉 Ver el documento de presentación comercial detallado en [`docs/04-Brochure-Presentacion-Servicios-Publico-Privado-y-Licitaciones-Parciales.md`](04-Brochure-Presentacion-Servicios-Publico-Privado-y-Licitaciones-Parciales.md) y la presentación interactiva web/PDF en [`presentacion-servicios-ejecutiva.html`](../presentacion-servicios-ejecutiva.html).
+

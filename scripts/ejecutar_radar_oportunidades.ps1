@@ -8,3 +8,4 @@ if (Test-Path $venvPython) {
 } else {
     python $scriptPath
 }
+

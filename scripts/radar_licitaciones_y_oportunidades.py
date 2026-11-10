@@ -326,6 +326,24 @@ OPORTUNIDADES_CARTERA = [
             "opex_yr1_usd": 7_400_000,
             "apply_rigi": True
         }
+    },
+    {
+        "id": "OPP-07",
+        "nombre": "Licitaciones Parciales de Provisión de Equipos por Lotes (Paneles TOPCon, Inversores, Trackers, BESS, STS y Cargadores EV para Entes Públicos y Privados)",
+        "tipo_convocatoria": "Licitaciones Públicas y Privadas de Suministro de Equipos (Supply-Only / Split-Package Procurement para Distribuidoras, Provincias, Municipios, Mineras y EPCistas)",
+        "entes_oficiales_referencia": ["Dirección General de Aduanas / ARCA", "INTI / IRAM / IEC 61215 & 61730", "IEEE 2800 / CIRSOC 102", "CAMMESA (Homologación SMEC / SOTR)"],
+        "servicio_llave_en_mano_ofrecido": "Provisión Directa de Fábrica (Turquía, 1 GW/año) con Financiación del 50% a 12 años (5,80% USD) de Lotes Individuales o Combinados: Módulos N-Type TOPCon Bifaciales, Trackers 1P/2P, Inversores String/Grid-Forming, Contenedores BESS LFP, Celdas/Tableros MT y Cargadores DC EV (Lote de Referencia: 50 MWp)",
+        "requisitos_para_participar": [
+            "Certificaciones internacionales IEC 61215, IEC 61730, CE, ISO 9001/14001/45001 y ensayos de electroluminiscencia EL al 100% pre-embarque (FAT).",
+            "Garantía de Mantenimiento de Oferta y Garantía de Cumplimiento de Suministro (Performance Bond 10%) con Seguro de Rendimiento Lineal a 25-30 años.",
+            "Estructuración de Carta de Crédito / Buyer's Credit ECA por el 50% del lote de equipamiento a favor del ente público, distribuidora o empresa privada compradora."
+        ],
+        "parametros_financieros": {
+            "capex_usd": 22_500_000,
+            "rev_yr1_usd": 7_450_000,
+            "opex_yr1_usd": 650_000,
+            "apply_rigi": False
+        }
     }
 ]
 
@@ -462,3 +480,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
