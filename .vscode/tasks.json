@@ -1,0 +1,24 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Ejecutar Radar Web de Licitaciones, Requisitos y Análisis Financiero",
+      "type": "shell",
+      "command": "C:\\Users\\majon\\.gemini\\antigravity-ide\\scratch\\antigravity-agents-repository\\.venv\\Scripts\\python.exe",
+      "args": [
+        "${workspaceFolder}/scripts/radar_licitaciones_y_oportunidades.py"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    }
+  ]
+}
