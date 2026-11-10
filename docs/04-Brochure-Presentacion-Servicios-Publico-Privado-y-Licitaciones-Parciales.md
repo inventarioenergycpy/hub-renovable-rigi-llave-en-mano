@@ -83,47 +83,48 @@ No es necesario contratar el parque completo para acceder a nuestra tecnología 
 
 ---
 
-## ⚡ DIAPOSITIVA 4: INGENIERÍA DE VALOR — VENTA DE ENERGÍA, VENTA DE POTENCIA Y ESTABILIZACIÓN DE LÍNEAS
+## ⚡ DIAPOSITIVA 4: INGENIERÍA DE VALOR — VENTA DE ENERGÍA, VENTA DE POTENCIA Y ESTABILIZACIÓN DE LÍNEAS (SIN DOBLE CONTABILIDAD)
 
-Nuestra propuesta técnica y comercial multiplica los ingresos del proyecto y resuelve las restricciones físicas de la red eléctrica:
+Nuestra propuesta técnica y comercial se rige estrictamente por las reglas de remuneración reales de **CAMMESA y la Secretaría de Energía (Pliegos *AlmaGBA* Res. SE 67/2025, *AlmaSADI* Res. SE 50/2026 & 155/2026 y *MATER*)**:
 
 1. **Subsanación de Irregularidades en las Líneas con BESS *Grid-Forming* (IEEE 2800)**:
    - Las líneas extensas de 33 kV, 132 kV y 500 kV sufren colapsos de tensión cuando superan su **Límite de Impedancia de Onda ($SIL = V_n^2 / Z_c$)** en horas pico, y sobretensiones por **Efecto Ferranti** en horas valle.
-   - Nuestros sistemas BESS con inversores *Grid-Forming* inyectan o absorben potencia reactiva dinámica ($Q(V)$ en 4 cuadrantes como un STATCOM las 24 hs), aportan **inercia sintética ($H \ge 4\text{ s}$)** y almacenan el excedente solar del mediodía para eliminar el **8% de recorte (*curtailment*) del MATER Referencial A**.
-2. **Doble Flujo de Caja Mayorista: Venta de Energía ($\text{MWh}$) + Venta de Potencia Firme ($\text{USD/MW-mes}$)**:
-   - **Venta de Energía Base en MATER Pleno**: Contratos PPA a 10–15 años a **$\text{USD } 62,0/\text{MWh}$** (frente a un costo monómico MEM de $\text{USD } 67\text{–}95/\text{MWh}$).
-   - **Venta de Energía en Bloque Pico Nocturno (18:00 a 23:00 hs)**: Despacho de la energía solar almacenada en el BESS a **$\text{USD } 92,0/\text{MWh}$**, desplazando generación térmica a gasoil/GNL que le cuesta al sistema entre **$\text{USD } 120\text{ y } 168/\text{MWh}$**.
-   - **Contrato de Venta por Potencia Firme (Esquema CAMMESA AlmaGBA / AlmaSADI)**: Cobro fijo mensual por disponibilidad de potencia firme de **$\text{USD } 10.161\text{ a } 15.000/\text{MW-mes}$** (adoptado en **$\text{USD } 11.500/\text{MW-mes}$**). **Este ingreso fijo cubre por sí solo el 114,8% de toda la cuota anual del financiamiento del 50%**, acelerando radicalmente el retorno de la inversión.
+   - Nuestros sistemas BESS con inversores *Grid-Forming* inyectan o absorben potencia reactiva dinámica ($Q(V)$ en 4 cuadrantes como un STATCOM las 24 hs), aportan **inercia sintética ($H \ge 4\text{ s}$)** y almacenan el excedente solar del mediodía para reducir el **8% de recorte (*curtailment*) del MATER Referencial A**.
+2. **Estructura Real de Precios en el Sistema: Generación ($\text{MWh}$) + Potencia Firme ($\text{USD/MW-mes}$)**:
+   - **Venta de Generación Solar (PPA MATER / Distribuidoras)**:
+     - *Rango Actual de Mercado (2025–2026)*: **$\text{USD } 55,0\text{ a } 65,0/\text{MWh}$** en contratos bilaterales MATER.
+     - *Piso Mínimo Admisible (Peor Caso P90)*: **$\text{USD } 50,0/\text{MWh}$ neto** (contemplando 8% de *curtailment* y generación P90).
+   - **Contrato de Venta por Potencia Firme BESS (Esquema Oficial CAMMESA *AlmaGBA* / *AlmaSADI*)**:
+     - En los pliegos oficiales de CAMMESA, el BESS de 4 horas continuas (HAC) cobra un **Cargo Fijo por Disponibilidad de Potencia** cuyo promedio adjudicado es de **$\text{USD } 10.161\text{ a } 10.500/\text{MW-mes}$** (con tope de pliego de $\text{USD } 12.500\text{ a } 15.000/\text{MW-mes}$ y un piso extremo de compulsa en *AlmaSADI* de $\text{USD } 7.397/\text{MW-mes}$).
+     - Por la energía efectivamente descargada del BESS, el pliego abona una remuneración variable operativa **`PES = USD 10,0/MWh`** (más reconocimiento de pérdidas del ciclo), **sin duplicar un segundo PPA de energía sobre la misma generación solar**.
+     - *Condición de Borde de Margen Mínimo*: Fijamos nuestro **Piso Técnico de Oferta de Potencia en $\text{USD } 9.000\text{–}9.200/\text{MW-mes}$ (+ `PES` $\text{USD } 10/\text{MWh}$)**, lo que garantiza que incluso en el **Peor Caso (P90)** el proyecto obtenga un **Margen de Ganancia Neta Contable Mínimo del 19,2% al 22,8%** y cubra con holgura el servicio de la deuda ($\text{DSCR} \ge 1,25\text{x–}1,39\text{x}$).
 
 ---
 
 ## 🚗 DIAPOSITIVA 5: PABELLONES DE ELECTROGASOLINERAS Y ARQUITECTURA FLEXIBLE PARA HIDRÓGENO VERDE ($\text{H}_2\text{V}$)
 
-### 1. Desarrollo de Pabellones de Electrogasolineras ("Solar-to-Wheel")
-- Transformamos una fracción de la energía solar propia (costo LCOE de **$\text{USD } 29/\text{MWh}$**) en venta minorista de alta rotación para vehículos eléctricos a **$\text{USD } 340/\text{MWh}$ ($\text{USD } 0,34/\text{kWh}$)**.
-- **Triple Beneficio**:
-  - **Para el Inversor / Estación de Servicio**: Margen bruto superior al **85%** y **Payback de 1,40 años sobre el capital propio**.
-  - **Para el Usuario y Flotas Logísticas**: Tarifa un **30% a 45% más económica que las redes públicas actuales** ($\sim\text{ARS } 580\text{–}798/\text{kWh}$ en YPF Punto Eléctrico) y un **55% más barata por kilómetro recorrido que el gasoil o la nafta**.
-  - **Para la Distribuidora Eléctrica**: Cada pabellón incorpora un **BESS *Buffer* local ($1\text{ MWh}$)** que alimenta los cargadores ultra-rápidos de $180\text{–}360\text{ kW}$ sin generar picos de potencia ni caídas de tensión en la red urbana o rural.
+### 1. Desarrollo de Pabellones de Electrogasolineras ("Solar-to-Wheel" con Rampa Realista de Adopción)
+- Transformamos una fracción de la energía solar propia en venta minorista para vehículos eléctricos y flotas logísticas a través de cargadores ultra-rápidos DC ($180\text{–}360\text{ kW}$) con **BESS *Buffer* local ($1\text{ MWh}$)**.
+- **Modelado Conservador de Utilización**: Considerando el tamaño actual del parque eléctrico en Argentina, proyectamos una **utilización inicial prudente del 6% al 7,5% en el Año 1 (Peor Caso P90)** y del **12% al 13,5% en el Caso Base (P50)** apalancada en convenios previos con flotas corporativas, logrando un **Payback realista de 5,10 años en Caso Base (3,77 años sobre Equity) y de 6,76 años en el Peor Caso (5,99 años sobre Equity)**.
 
 ### 2. Sistemas Flexibles "H2V-Ready" para Hidrógeno Verde en Argentina y Latinoamérica
-- Nuestras subestaciones y parques solares se entregan con **barraje colector en corriente continua ($1.500\text{ V}_{\text{dc}}$ *DC-Coupled Ready*)**, listo para conectar electrolizadores **PEM o Alcalinos** cuando el cliente decida escalar hacia el **Hidrógeno Verde ($\text{H}_2\text{V}$)** y el **Amoníaco Verde ($\text{NH}_3$)**.
-- El acoplamiento directo en corriente continua ahorra un **5,5% de pérdidas eléctricas** y un **18% de CAPEX eléctrico**, logrando un costo nivelado **$\text{LCOH} \approx \text{USD } 2,15\text{–}2,45/\text{kg H}_2$** con **0% de retenciones a la exportación a partir del 3.º año bajo el RIGI**.
+- Nuestras subestaciones y parques solares se entregan con **barraje colector en corriente continua ($1.500\text{ V}_{\text{dc}}$ *DC-Coupled Ready*)**, listo para conectar electrolizadores **PEM o Alcalinos** cuando el cliente cuente con contrato *Off-Take* en firme para **Hidrógeno Verde ($\text{H}_2\text{V}$)** y **Amoníaco Verde ($\text{NH}_3$)** con **0% de retenciones a la exportación bajo el RIGI**.
 
 ---
 
-## 📊 DIAPOSITIVA 6: RESUMEN DE RENTABILIDAD AUDITADA CON PRECIOS OFICIALES DEL SISTEMA (2025–2026)
+## 📊 DIAPOSITIVA 6: MATRIZ AUDITADA DE RENTABILIDAD — PEOR CASO ADMISIBLE (P90 — MARGEN MÍNIMO) VS. CASO BASE REALISTA (P50)
 
-Todos los indicadores están respaldados por datos oficiales de **CAMMESA, Secretaría de Energía, ENRE, ERSeP, Comité RIGI (Ley 27.742), BloombergNEF e IRENA**, incluyendo la **financiación del 50% al 5,80% anual en USD (12 años)**:
+Todos los indicadores incluyen **CAPEX *All-In* real de Argentina** (obras civiles, interconexión AT, costos financieros durante construcción *IDC* y reposición de celdas BESS) y **tasa de deuda *All-In* del 7,20% al 8,20% anual en USD** (incluyendo prima de seguro de riesgo país ECA sobre el 50% financiado desde Turquía):
 
-| Modalidad de Servicio / Proyecto Tipo | Alcance Público / Privado | CAPEX Total (USD) | Financiación 50% Fábrica (USD) | EBITDA Año 1 (USD) | TIR Proyecto (USD) | TIR Equity (USD) | Payback Proyecto | Payback Equity |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **1. Hub Integral VPU RIGI** *(Solar 250 MWac + BESS 400 MWh + 10 Electrogasolineras + H2V-Ready)* | Privado / Mixto (RIGI) | USD 240,00M | USD 120,00M | **USD 64,56M** *(88,7%)* | **24,48%** | **39,77%** | **3,68 años** | **2,36 años** |
-| **2. Licitación Potencia Firme BESS + Solar** *(Esquema CAMMESA AlmaSADI / AlmaGBA: 50 MW/200 MWh BESS + 100 MWac Solar)* | Público / Distribuidoras | USD 89,50M | USD 44,75M | **USD 23,45M** *(88,8%)* | **19,88%** | **31,33%** | **4,33 años** | **2,95 años** |
-| **3. Suministro Minero 24/7 Black-Start** *(Solar 150 MWac + BESS 80 MW/320 MWh en NOA/Cuyo)* | Privado Minero / Fideicomiso | USD 142,00M | USD 71,00M | **USD 38,90M** *(88,8%)* | **24,99%** | **40,70%** | **3,62 años** | **2,31 años** |
-| **4. Parque Regional Distribuidoras / Cooperativas** *(Res. SE 400/2025: Solar 60 MWac + BESS 20 MW/80 MWh)* | Público / Cooperativas / GUDIs | USD 51,00M | USD 25,50M | **USD 13,10M** *(88,2%)* | **19,35%** | **30,43%** | **4,42 años** | **3,03 años** |
-| **5. Red de 20 Pabellones de Electrogasolineras** *(120 Cargadores DC 180-360 kW + 10 MWp FV + 20 MWh BESS)* | Público Vial / Privado Flotas | USD 30,00M | USD 15,00M | **USD 17,54M** *(78,5%)* | **40,76%** | **69,95%** | **2,26 años** | **1,40 años** |
-| **6. Licitación Parcial de Equipos (Lote Típico 50 MWp)** *(Provisión de Módulos TOPCon, Trackers, Inversores o BESS)* | Público / Privado (EPCistas) | Desde USD 1,5M a USD 26,0M | **50% Financiado** (5,80% anual USD) | Ahorro directo del **14% al 22%** en CAPEX | — | — | Desembolso diferido a **12 años** | Liberación del 50% de caja del comprador |
+| Modalidad de Servicio / Proyecto Tipo | CAPEX All-In (Peor Caso P90 / Base P50) | Margen Ganancia Neta Contable Mínimo (P90) | TIR Proyecto (Peor Caso P90 / Base P50) | TIR Equity (Peor Caso P90 / Base P50) | **Payback Proyecto (Peor Caso P90 / Base P50)** | **Payback Equity (Peor Caso P90 / Base P50)** | DSCR Mín. (P90 / P50) |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **1. Hub Integral VPU RIGI** *(Solar 250 MWac + BESS 400 MWh + 10 Electrogasolineras + Bus H2V)* | USD 275,0M / 265,0M | **19,20%** *(Prom 20a: 28,1%)* | **9,16%** / **14,03%** | **12,01%** / **20,09%** | **8,52 años** / **6,11 años** | **7,66 años** / **4,65 años** | **1,39x** / 1,98x |
+| **2. Licitación Potencia Firme BESS + Solar** *(CAMMESA AlmaSADI / AlmaGBA: 50 MW BESS + 100 MWac Solar)* | USD 108,0M / 102,0M | **19,62%** *(Prom 20a: 27,4%)* | **9,91%** / **13,73%** | **12,78%** / **19,79%** | **7,82 años** / **6,39 años** | **7,26 años** / **4,84 años** | **1,23x** / 1,82x |
+| **3. Suministro Minero 24/7 Black-Start** *(Solar 150 MWac + BESS 80 MW/320 MWh en NOA/Cuyo)* | USD 168,0M / 156,0M | **21,52%** *(Prom 20a: 29,9%)* | **9,98%** / **15,81%** | **13,29%** / **23,07%** | **7,99 años** / **5,43 años** | **6,90 años** / **4,04 años** | **1,44x** / 2,14x |
+| **4. Parque Regional Distribuidoras / Cooperativas** *(Res. SE 400/2025: Solar 60 MWac + BESS 20 MW/80 MWh)* | USD 61,5M / 57,5M | **19,68%** *(Prom 20a: 27,6%)* | **9,98%** / **14,06%** | **12,89%** / **20,36%** | **7,80 años** / **6,29 años** | **7,23 años** / **4,72 años** | **1,27x** / 1,89x |
+| **5. Red de 20 Pabellones de Electrogasolineras** *(120 Cargadores DC + 10 MWp FV + 20 MWh BESS)* | USD 33,5M / 31,0M | **18,42%** *(Prom 20a: 28,0%)* | **13,48%** / **19,61%** | **17,78%** / **28,10%** | **6,76 años** / **5,10 años** | **5,99 años** / **3,77 años** | **2,08x** / 2,76x |
+| **6. Planta Modular Hidrógeno Verde ($\text{H}_2\text{V}$ 100 MW) y $\text{NH}_3$** *(Acero Verde DRI / Exportación RIGI)* | USD 238,0M / 222,0M | **20,37%** *(Prom 20a: 29,3%)* | **9,84%** / **14,74%** | **13,05%** / **21,26%** | **8,14 años** / **5,83 años** | **7,11 años** / **4,39 años** | **1,49x** / 2,08x |
+| **7. Licitación Parcial de Equipos por Lotes (Ref. 50 MWp)** *(Paneles TOPCon, Inversores, Trackers, BESS, EV)* | USD 24,5M / 23,0M | **22,86%** *(Prom 20a: 31,8%)* | **11,00%** / **14,65%** | **14,20%** / **20,37%** | **7,41 años** / **6,14 años** | **7,04 años** / **4,94 años** | **1,83x** / 2,30x |
 
 ---
 
@@ -133,3 +134,4 @@ Todos los indicadores están respaldados por datos oficiales de **CAMMESA, Secre
 2. **Paso 2 — Suscripción de Acuerdo NCNDA y Apertura de Carpeta Técnica de Fábrica**: Firma del convenio de confidencialidad, entrega de hojas de datos (*datasheets*), certificados **IEC / TÜV / IEEE 2800**, pólizas de garantía asegurada a 25–30 años y *Term Sheet* de **financiación del 50%**.
 3. **Paso 3 — Ingeniería de Detalle, Certificación RTB (58 Ítems) / Oferta Licitatoria y Cierre Financiero**: Presentación de garantías de mantenimiento de oferta, aprobación de estudios eléctricos CAMMESA Anexo 30 / beneficios RIGI y emisión de órdenes de embarque.
 4. **Paso 4 — Suministro con Inspección FAT, Construcción EPC, Puesta en Marcha (COD) y O&M**: Entrega auditada en sitio (0% arancel bajo RIGI), comisionamiento bajo norma **IEC 62446** y operación garantizada con disponibilidad $\ge 99,0\%$.
+
