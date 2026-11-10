@@ -103,6 +103,18 @@
       color: #fff;
     }
 
+    .btn-light-mode {
+      background: #f8fafc;
+      color: #0f172a;
+      border: 1px solid #94a3b8;
+    }
+
+    .btn-light-mode:hover {
+      background: #e2e8f0;
+      color: #000000;
+      border-color: #0f172a;
+    }
+
     .container {
       max-width: 1240px;
       margin: 0 auto;
@@ -164,6 +176,7 @@
       font-weight: 800;
       line-height: 1.2;
       margin-bottom: 16px;
+      color: #ffffff;
       background: linear-gradient(90deg, #ffffff, #38bdf8, #34d399);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -174,6 +187,18 @@
       color: var(--text-muted);
       margin-bottom: 28px;
       max-width: 980px;
+    }
+
+    .lead-paragraph {
+      color: #cbd5e1;
+      margin-bottom: 16px;
+      font-size: 0.96rem;
+    }
+
+    .card-subtitle {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      margin-bottom: 10px;
     }
 
     /* Grillas y Tarjetas */
@@ -235,6 +260,10 @@
 
     .kpi-cyan {
       color: var(--accent-cyan);
+    }
+
+    .kpi-purple {
+      color: #a855f7;
     }
 
     .kpi-label {
@@ -352,21 +381,279 @@
       color: #fde68a;
     }
 
+    /* ==========================================================================
+       MODO VISTA IMPRIMIBLE EN PANTALLA (body.print-preview) Y @media print
+       Garantiza fuentes negras oscuras (#000000 / #111827) de alto contraste
+       sobre fondo blanco (#ffffff) sin ningún texto claro o transparente.
+       ========================================================================== */
+    body.print-preview {
+      background-color: #ffffff !important;
+      color: #000000 !important;
+    }
+
+    body.print-preview .slide,
+    body.print-preview .card,
+    body.print-preview .card-highlight,
+    body.print-preview .card-gold {
+      background: #ffffff !important;
+      color: #000000 !important;
+      border: 1.5px solid #334155 !important;
+      box-shadow: none !important;
+    }
+
+    body.print-preview .slide-header {
+      border-bottom: 1.5px solid #64748b !important;
+    }
+
+    body.print-preview .hero-title,
+    body.print-preview .slide-title,
+    body.print-preview h1,
+    body.print-preview h2,
+    body.print-preview h3,
+    body.print-preview .kpi-label,
+    body.print-preview strong,
+    body.print-preview b {
+      color: #000000 !important;
+      background: none !important;
+      -webkit-background-clip: initial !important;
+      -webkit-text-fill-color: #000000 !important;
+    }
+
+    body.print-preview .hero-subtitle,
+    body.print-preview .lead-paragraph,
+    body.print-preview .card-subtitle,
+    body.print-preview .kpi-desc,
+    body.print-preview p,
+    body.print-preview ul.check-list li,
+    body.print-preview small,
+    body.print-preview code {
+      color: #111827 !important;
+    }
+
+    body.print-preview .slide-step {
+      color: #0f172a !important;
+      font-weight: 800 !important;
+    }
+
+    body.print-preview .kpi-value {
+      color: #064e3b !important;
+      -webkit-text-fill-color: #064e3b !important;
+    }
+
+    body.print-preview .kpi-gold {
+      color: #78350f !important;
+      -webkit-text-fill-color: #78350f !important;
+    }
+
+    body.print-preview .kpi-cyan {
+      color: #0c4a6e !important;
+      -webkit-text-fill-color: #0c4a6e !important;
+    }
+
+    body.print-preview .kpi-purple {
+      color: #3b0764 !important;
+      -webkit-text-fill-color: #3b0764 !important;
+    }
+
+    body.print-preview ul.check-list li::before {
+      color: #065f46 !important;
+    }
+
+    body.print-preview .table-wrap {
+      border: 1.5px solid #1e293b !important;
+    }
+
+    body.print-preview table {
+      background: #ffffff !important;
+      color: #000000 !important;
+    }
+
+    body.print-preview th {
+      background: #e2e8f0 !important;
+      color: #000000 !important;
+      border-bottom: 2px solid #0f172a !important;
+      font-weight: 800 !important;
+    }
+
+    body.print-preview td {
+      background: #ffffff !important;
+      color: #000000 !important;
+      border-bottom: 1px solid #94a3b8 !important;
+    }
+
+    body.print-preview tr.row-highlight td {
+      background: #f1f5f9 !important;
+      color: #000000 !important;
+    }
+
+    body.print-preview .pill,
+    body.print-preview .pill-green,
+    body.print-preview .pill-gold {
+      background: #f1f5f9 !important;
+      color: #000000 !important;
+      border: 1.5px solid #0f172a !important;
+    }
+
+    body.print-preview .alert-box {
+      background: #f8fafc !important;
+      color: #000000 !important;
+      border: 1.5px solid #0f172a !important;
+      border-left: 6px solid #0f172a !important;
+    }
+
     @media print {
+      @page {
+        margin: 12mm;
+      }
+
       body {
-        background: #fff;
-        color: #000;
-        padding: 0;
+        background: #ffffff !important;
+        color: #000000 !important;
+        padding: 0 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
       }
+
       .topbar {
-        display: none;
+        display: none !important;
       }
+
+      .container {
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+
       .slide {
+        background: #ffffff !important;
+        color: #000000 !important;
         page-break-inside: avoid;
         break-inside: avoid;
-        box-shadow: none;
-        border: 1px solid #ccc;
-        margin-bottom: 20px;
+        box-shadow: none !important;
+        border: 1.5px solid #1e293b !important;
+        margin-bottom: 18px !important;
+        padding: 22px 26px !important;
+      }
+
+      .slide::before {
+        background: #0f172a !important;
+        height: 3px !important;
+      }
+
+      .slide-header {
+        border-bottom: 1.5px solid #475569 !important;
+        padding-bottom: 10px !important;
+        margin-bottom: 16px !important;
+      }
+
+      .hero-title,
+      .slide-title,
+      h1,
+      h2,
+      h3,
+      .kpi-label,
+      strong,
+      b {
+        color: #000000 !important;
+        background: none !important;
+        -webkit-background-clip: initial !important;
+        -webkit-text-fill-color: #000000 !important;
+      }
+
+      .hero-subtitle,
+      .lead-paragraph,
+      .card-subtitle,
+      .kpi-desc,
+      p,
+      ul.check-list li,
+      small,
+      code {
+        color: #111827 !important;
+        -webkit-text-fill-color: #111827 !important;
+      }
+
+      .slide-step {
+        color: #0f172a !important;
+        font-weight: 800 !important;
+      }
+
+      .card,
+      .card-highlight,
+      .card-gold {
+        background: #ffffff !important;
+        color: #000000 !important;
+        border: 1.2px solid #334155 !important;
+        box-shadow: none !important;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+
+      .kpi-value {
+        color: #064e3b !important;
+        -webkit-text-fill-color: #064e3b !important;
+      }
+
+      .kpi-gold {
+        color: #78350f !important;
+        -webkit-text-fill-color: #78350f !important;
+      }
+
+      .kpi-cyan {
+        color: #0c4a6e !important;
+        -webkit-text-fill-color: #0c4a6e !important;
+      }
+
+      .kpi-purple {
+        color: #3b0764 !important;
+        -webkit-text-fill-color: #3b0764 !important;
+      }
+
+      ul.check-list li::before {
+        color: #000000 !important;
+      }
+
+      .table-wrap {
+        border: 1.5px solid #0f172a !important;
+        overflow: visible !important;
+      }
+
+      table {
+        background: #ffffff !important;
+        color: #000000 !important;
+        width: 100% !important;
+      }
+
+      th {
+        background: #e2e8f0 !important;
+        color: #000000 !important;
+        border-bottom: 2px solid #000000 !important;
+        font-weight: 800 !important;
+      }
+
+      td {
+        background: #ffffff !important;
+        color: #000000 !important;
+        border-bottom: 1px solid #64748b !important;
+      }
+
+      tr.row-highlight td {
+        background: #f1f5f9 !important;
+        color: #000000 !important;
+      }
+
+      .pill,
+      .pill-green,
+      .pill-gold {
+        background: #f1f5f9 !important;
+        color: #000000 !important;
+        border: 1.2px solid #0f172a !important;
+      }
+
+      .alert-box {
+        background: #f8fafc !important;
+        color: #000000 !important;
+        border: 1.5px solid #0f172a !important;
+        border-left: 6px solid #000000 !important;
       }
     }
 
@@ -399,7 +686,8 @@
       <a href="#slide-5" class="btn">5. BESS &amp; Potencia</a>
       <a href="#slide-6" class="btn">6. Electrogasolineras &amp; H2V</a>
       <a href="#slide-7" class="btn">7. Rentabilidad P50 / P90</a>
-      <button class="btn btn-primary" onclick="window.print()">🖨️ Imprimir / Exportar PDF</button>
+      <button type="button" id="toggle-print-view" class="btn btn-light-mode" onclick="togglePrintPreview()">📄 Vista Imprimible (Fondo Blanco / Letra Negra)</button>
+      <button type="button" class="btn btn-primary" onclick="window.print()">🖨️ Imprimir / Exportar PDF</button>
     </div>
   </header>
 
@@ -430,7 +718,7 @@
           <div class="kpi-desc">Nos presentamos a licitaciones de obra integral (EPC) o a licitaciones parciales de provisión de paneles, inversores, trackers, baterías BESS y cargadores EV.</div>
         </div>
         <div class="card">
-          <div class="kpi-value" style="color:#a855f7;">H2V-Ready</div>
+          <div class="kpi-value kpi-purple">H2V-Ready</div>
           <div class="kpi-label">Sistemas Preparados para Hidrógeno Verde</div>
           <div class="kpi-desc">Arquitectura con barraje en Corriente Continua (1500 Vdc DC-Coupled) lista para insertar electrolizadores de H2V y Amoníaco Verde con 0% retenciones RIGI.</div>
         </div>
@@ -447,7 +735,7 @@
         <span class="pill pill-gold">Identidad Protegida bajo Acuerdo NCNDA</span>
       </div>
 
-      <p style="color:#cbd5e1; margin-bottom:16px;">
+      <p class="lead-paragraph">
         Turquía se ha consolidado como el mayor polo de manufactura solar de Europa y Medio Oriente (&gt;13,2 GW/año). Nuestra organización actúa en alianza con uno de los grupos industriales eléctricos y fotovoltaicos más avanzados de dicho país, poniendo a disposición de proyectos públicos y privados en Argentina y Latinoamérica su capacidad fabril y financiera:
       </p>
 
@@ -495,7 +783,7 @@
       <div class="grid-2">
         <div class="card">
           <h3>🏛️ Sector Público (Nacional, Provincial, Municipal y Distribuidoras)</h3>
-          <p style="color:var(--text-muted); font-size:0.88rem; margin-bottom:10px;">
+          <p class="card-subtitle">
             Participamos en Licitaciones Públicas Nacionales e Internacionales, Concursos de Precios, Iniciativas Privadas (IP) y Asociaciones Público-Privadas (PPP):
           </p>
           <ul class="check-list">
@@ -508,7 +796,7 @@
 
         <div class="card">
           <h3>🏭 Sector Privado (Industrias, Minería, Agro y Desarrolladores)</h3>
-          <p style="color:var(--text-muted); font-size:0.88rem; margin-bottom:10px;">
+          <p class="card-subtitle">
             Estructuramos contratos corporativos en dólares, autogeneración en planta y provisión financiada de equipamiento para terceros:
           </p>
           <ul class="check-list">
@@ -531,7 +819,7 @@
         <span class="pill">Provisión Directa de Fábrica + Financiación 50%</span>
       </div>
 
-      <p style="color:#cbd5e1; margin-bottom:14px;">
+      <p class="lead-paragraph">
         Además de construir proyectos completos "Llave en Mano", <strong>nos presentamos de manera independiente a licitaciones parciales de provisión de equipamiento</strong> (públicas o privadas), cotizando lotes individuales con precios directos de fábrica, financiación del 50% y un margen neto mínimo del 12% sobre CIF (18% en Caso Base):
       </p>
 
@@ -757,6 +1045,18 @@
     </section>
 
   </main>
+
+  <script>
+    function togglePrintPreview() {
+      const isPrintPreview = document.body.classList.toggle('print-preview');
+      const btn = document.getElementById('toggle-print-view');
+      if (isPrintPreview) {
+        btn.textContent = '🌙 Volver a Vista Oscura';
+      } else {
+        btn.textContent = '📄 Vista Imprimible (Fondo Blanco / Letra Negra)';
+      }
+    }
+  </script>
 
 </body>
 </html>
